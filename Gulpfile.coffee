@@ -16,6 +16,17 @@ gulp.task 'coffee', ->
     .pipe(gulp.dest('./dist/'))
 
 
+karma = require('gulp-karma')
+gulp.task 'test', ->
+  gulp.src('./see-karma-conf')
+    .pipe karma
+      configFile: 'test/karma.conf.coffee'
+      action: 'run'
+    .on 'error', (err) ->
+      # Make sure failed tests cause gulp to exit non-zero
+      throw err
+
+
 gulp.task 'build', ['lint', 'coffee']
 
 
