@@ -1,0 +1,23 @@
+{
+  "name": "angular-multiselect",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Sinetheta/angular-multiselect",
+  "authors": [
+    "Kevin Attfield <k.attfield@gmail.com>"
+  ],
+  "description": "an agular directive for multi-selects",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "~1.2.25"
+  }
+}
