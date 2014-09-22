@@ -7,6 +7,14 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  <body>
+  <body ng-app="demo" ng-controller="demoCtrl">
+
+    <h1>Angular Multiselect</h1>
+
+    <multiselect model-exp="myThing" options-exp="thing for thing in awesomeThings"></multiselect>
+
+    <script src="angularjs/angular.js"></script>
+    <script src="angular-multiselect.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

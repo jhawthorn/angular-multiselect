@@ -10,7 +10,11 @@ gulp.task 'coffee', ->
 
 webserver = require('gulp-webserver')
 gulp.task 'serve', ->
-  gulp.src('demo')
+  gulp.src([
+    'bower_components'
+    'demo'
+    'dist'
+  ])
     .pipe webserver
       livereload: true
       open: true
