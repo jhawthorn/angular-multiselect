@@ -20,4 +20,8 @@ gulp.task 'serve', ->
       open: true
 
 
-gulp.task('default', ['coffee'])
+gulp.task 'watch', ->
+  gulp.watch('src/*.coffee', ['coffee'])
+
+
+gulp.task('default', ['coffee', 'serve', 'watch']);
