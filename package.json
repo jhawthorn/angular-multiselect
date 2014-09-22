@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/Sinetheta/angular-multiselect/issues"
   },
-  "homepage": "https://github.com/Sinetheta/angular-multiselect"
+  "homepage": "https://github.com/Sinetheta/angular-multiselect",
+  "devDependencies": {
+    "coffee-script": "^1.8.0",
+    "gulp": "^3.8.8",
+    "gulp-coffee": "^2.2.0",
+    "gulp-util": "^3.0.1"
+  }
 }
