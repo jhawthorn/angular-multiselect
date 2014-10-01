@@ -3,7 +3,8 @@ angular.module('multiselect', [])
   replace: true
   require: ['modelExp', 'optionsExp']
   restrict: 'EA'
-  scope: false
-  template: (element, attrs) ->
-    "<select ng-model=\"#{attrs.modelExp}\" ng-options=\"#{attrs.optionsExp}\"></select>"
+  scope:
+    model: '='
+    options: '='
+  template: '<select ng-model="model" ng-options="thing for thing in options"></select>'
 )
