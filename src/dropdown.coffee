@@ -17,6 +17,7 @@ angular.module('multiselect')
 
     init: (element) =>
       @element = element
+      @element.addClass('ams-dropdown')
 
     toggle: (open) =>
       @scope.isOpen = if open? then !!open else !@scope.isOpen
@@ -38,8 +39,15 @@ angular.module('multiselect')
         $scope.$apply ->
           dropdownCtrl.toggle()
 
+    element.addClass('ams-dropdown-toggle')
     element.bind('click', toggleDropdown)
 
     $scope.$on '$destroy', ->
       element.unbind('click', toggleDropdown)
+)
+
+.directive('amsDropdownMenu', ->
+  require: '?^amsDropdown'
+  link: ($scope, element) ->
+    element.addClass('ams-dropdown-menu')
 )
