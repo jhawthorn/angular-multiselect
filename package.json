@@ -28,6 +28,7 @@
     "gulp-concat": "^2.4.1",
     "gulp-if": "^1.2.5",
     "gulp-karma": "0.0.4",
+    "gulp-ruby-sass": "^0.7.1",
     "gulp-util": "^3.0.1",
     "gulp-webserver": "^0.8.1",
     "karma": "^0.12.23",

@@ -10,6 +10,7 @@ Build task.
 * Lint Coffee.
 * Compile coffee.
 * Concat scripts.
+* Compile sass.
 * Output to dist.
 ###
 rimraf = require('rimraf')
@@ -33,6 +34,10 @@ concat = require('gulp-concat')
 concatTasks = lazypipe()
   .pipe(concat, config.main)
 
+sass = require('gulp-ruby-sass')
+sassTasks = lazypipe()
+  .pipe(sass)
+
 gulp.task 'build', ['clean'], ->
   gulp.src('src/*')
 
@@ -41,7 +46,10 @@ gulp.task 'build', ['clean'], ->
     .pipe(gulpif(/[.]coffee$/, coffeelintTasks()))
     .pipe(gulpif(/[.]coffee$/, coffeeTasks()))
 
-    .pipe(concatTasks())
+    .pipe(gulpif(/[.]js$/, concatTasks()))
+
+    .pipe(gulpif(/[.]sass$/, sassTasks()))
+
     .pipe(gulp.dest('dist'))
 
 
