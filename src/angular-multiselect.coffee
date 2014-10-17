@@ -8,12 +8,16 @@ angular.module('multiselect', ['templates'])
   templateUrl: 'multiselect.html'
   controller: [
     '$scope'
+    'Choice'
   (
       $scope
+      Choice
   ) ->
     model = $scope.model or []
 
     options = $scope.options or []
+    options.forEach (option, index) ->
+      options[index] = new Choice(option)
 
     $scope.options = options
 
