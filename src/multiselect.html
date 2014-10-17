@@ -1,0 +1,14 @@
+<div>
+  <ul>
+    <li ng-repeat="item in model">{{item.label}}</li>
+  </ul>
+  <ul>
+    <li ng-repeat="choice in options">
+      <label><input
+        type="checkbox"
+        ng-model="choice.selected"
+        ng-change="updateModel()"
+      /> {{choice.label}}</label>
+    </li>
+  </ul>
+</div>
