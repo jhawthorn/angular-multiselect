@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Sinetheta/angular-multiselect",
   "devDependencies": {
     "coffee-script": "^1.8.0",
+    "coffeelint": "^1.6.0",
     "gulp": "^3.8.8",
     "gulp-angular-templatecache": "^1.4.1",
     "gulp-coffee": "^2.2.0",
